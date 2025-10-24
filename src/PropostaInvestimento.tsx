@@ -122,8 +122,6 @@ const PropostaInvestimento = () => {
       subtitle: 'Sua Assistente de Vendas com IA',
       tagline: 'Seu time de vendas trabalhando 24h, até quando você dorme',
       highlight: 'Proposta de Parceria',
-      recipient: 'Silas',
-      company: 'Annex Vistorias',
       presenter: 'Victor Von Müller'
     },
 
@@ -653,14 +651,10 @@ const PropostaInvestimento = () => {
                 </div>
               </div>
 
-              {/* Informações do Destinatário */}
+              {/* Informações do Apresentador */}
               <div className="card-glass px-6 py-4 sm:px-8 sm:py-6 rounded-xl border border-white/10 inline-block">
-                <div className="text-white/70 text-xs sm:text-sm mb-2">Apresentado para</div>
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">{slide.recipient}</div>
-                <div className="text-emerald-400 text-base sm:text-lg">{slide.company}</div>
-                <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/10 text-white/60 text-xs sm:text-sm">
-                  Por: {slide.presenter}
-                </div>
+                <div className="text-white/70 text-xs sm:text-sm mb-2">Apresentado por</div>
+                <div className="text-xl sm:text-2xl font-bold text-emerald-400">{slide.presenter}</div>
               </div>
             </div>
           </div>
