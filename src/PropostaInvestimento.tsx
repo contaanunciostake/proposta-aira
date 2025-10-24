@@ -1051,12 +1051,64 @@ const PropostaInvestimento = () => {
           <div className={baseClasses}>
             <StarsBackground />
             <div className="relative z-10 max-w-7xl mx-auto">
-              <div className="mb-12">
-                <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">{slide.title}</h2>
-                <p className="text-xl text-white/70">{slide.subtitle}</p>
+              <div className="mb-6 sm:mb-8 md:mb-12">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 text-center sm:text-left">{slide.title}</h2>
+                <p className="text-base sm:text-lg md:text-xl text-white/70 text-center sm:text-left">{slide.subtitle}</p>
               </div>
 
-              <div className="card-glass rounded-3xl overflow-hidden border border-emerald-500/20 mb-8">
+              {/* Versão Mobile - Cards */}
+              <div className="block lg:hidden space-y-4 mb-8">
+                {slide.data.map((row: any, i: number) => (
+                  <div key={i} className="card-glass p-4 rounded-xl border border-emerald-500/20">
+                    <div className="flex items-center justify-between mb-3 pb-3 border-b border-white/10">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl font-bold text-white">Mês {row.mes}</span>
+                        <span className="px-2 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-sm font-bold text-emerald-400">
+                          {row.clientes} clientes
+                        </span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">MRR</div>
+                        <div className="text-base font-bold text-white">R$ {row.mrr.toLocaleString()}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Lucro</div>
+                        <div className="text-base font-bold text-green-400">R$ {row.lucro.toLocaleString()}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Você (15%)</div>
+                        <div className="text-lg font-bold text-emerald-400">R$ {row.investidor.toLocaleString()}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Empresa (85%)</div>
+                        <div className="text-base font-bold text-white/70">R$ {row.empresa.toLocaleString()}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Total Mobile */}
+                <div className="card-glass p-5 rounded-xl border-2 border-emerald-500/30 bg-gradient-to-r from-emerald-500/20 to-green-500/20">
+                  <div className="text-center mb-3">
+                    <div className="text-sm text-white/80 mb-2 uppercase tracking-wider">Total 6 Meses</div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center">
+                      <div className="text-xs text-white/60 mb-1">Você (15%)</div>
+                      <div className="text-2xl font-bold text-emerald-400">R$ {slide.total.investidor.toLocaleString()}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-xs text-white/60 mb-1">Empresa (85%)</div>
+                      <div className="text-xl font-bold text-white">R$ {slide.total.empresa.toLocaleString()}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Versão Desktop - Tabela */}
+              <div className="hidden lg:block card-glass rounded-3xl overflow-hidden border border-emerald-500/20 mb-8">
                 <div className="overflow-x-auto">
                   <table className="w-full text-white">
                     <thead className="bg-gradient-to-r from-emerald-600 to-green-600">
