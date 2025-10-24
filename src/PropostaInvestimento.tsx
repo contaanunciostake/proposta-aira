@@ -355,7 +355,7 @@ const PropostaInvestimento = () => {
 
       case 'problem':
         return (
-          <div className="h-full bg-gradient-to-br from-red-50 to-orange-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-red-50 to-orange-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="grid grid-cols-2 gap-4">
@@ -372,7 +372,7 @@ const PropostaInvestimento = () => {
 
       case 'solution':
         return (
-          <div className="h-full bg-gradient-to-br from-blue-50 to-purple-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-blue-50 to-purple-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="grid grid-cols-3 gap-4">
@@ -454,7 +454,7 @@ const PropostaInvestimento = () => {
 
       case 'business':
         return (
-          <div className="h-full bg-gradient-to-br from-purple-50 to-pink-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-purple-50 to-pink-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="grid grid-cols-3 gap-4 mb-4">
@@ -496,7 +496,7 @@ const PropostaInvestimento = () => {
 
       case 'projections':
         return (
-          <div className="h-full bg-gradient-to-br from-green-50 to-teal-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-green-50 to-teal-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -572,7 +572,7 @@ const PropostaInvestimento = () => {
 
       case 'breakdown':
         return (
-          <div className="h-full bg-gradient-to-br from-cyan-50 to-blue-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-cyan-50 to-blue-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="grid gap-4 mb-6">
@@ -670,7 +670,7 @@ const PropostaInvestimento = () => {
 
       case 'affiliates':
         return (
-          <div className="h-full bg-gradient-to-br from-orange-50 to-red-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-orange-50 to-red-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="bg-gradient-to-r from-orange-400 to-red-500 rounded-xl p-6 text-white text-center mb-6">
@@ -731,7 +731,7 @@ const PropostaInvestimento = () => {
 
       case 'timing':
         return (
-          <div className="h-full bg-gradient-to-br from-pink-50 to-rose-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-pink-50 to-rose-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">{slide.title}</h2>
             <div className="grid grid-cols-2 gap-6">
               {slide.reasons.map((reason, i) => (
@@ -747,7 +747,7 @@ const PropostaInvestimento = () => {
 
       case 'risks':
         return (
-          <div className="h-full bg-gradient-to-br from-red-50 to-orange-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-red-50 to-orange-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="space-y-4">
@@ -777,7 +777,7 @@ const PropostaInvestimento = () => {
 
       case 'timeline':
         return (
-          <div className="h-full bg-gradient-to-br from-indigo-50 to-purple-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-indigo-50 to-purple-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{slide.title}</h2>
             <p className="text-xl text-gray-600 mb-6">{slide.subtitle}</p>
             <div className="space-y-4">
@@ -814,7 +814,7 @@ const PropostaInvestimento = () => {
 
       case 'terms':
         return (
-          <div className="h-full bg-gradient-to-br from-gray-50 to-slate-50 p-8 overflow-auto">
+          <div className="min-h-full bg-gradient-to-br from-gray-50 to-slate-50 p-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">{slide.title}</h2>
             <div className="grid grid-cols-2 gap-4 mb-6">
               {slide.terms.map((term, i) => (
@@ -894,7 +894,7 @@ const PropostaInvestimento = () => {
 
   return (
     <div className="w-full h-screen bg-gray-900 flex flex-col">
-      <div className="flex-1 relative">
+      <div className="flex-1 relative overflow-auto">
         {renderSlide(slides[currentSlide])}
       </div>
       
